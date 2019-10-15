@@ -1,3 +1,40 @@
+<script>
+    
+    
+function myFiddle(){
+    
+    var x = event.pageX;
+    var y = event.pageY;
+    
+    
+    
+    var cords = "X: " + x + " Y: " + y ;
+    
+    document.getElementById("values").innerHTML = cords;
+    var data = getDate();
+    var datavar = data*10;
+
+    document.getElementById("checkthis").innerHTML = "Find this: " + datavar;
+    
+    if(x === datavar || y === datavar){
+            document.getElementById("changethis").innerHTML = "Found me!";
+        }
+    
+}
+
+function getDate(){
+    var date = new Date();
+    var seconds = date.getSeconds();
+    return seconds;
+}
+
+function emptyString(event){
+    document.getElementById("changethis").innerHTML="";
+}
+
+</script>
+
+
 <html>
 
     <head>Title</head>
@@ -13,8 +50,8 @@
         <h2 id="checkthis"  ></h2>
                 
 
-        <p>Use your mouse to hover inside the red box. As you hover you will observe the value change. Use the X Y coordinate values to find your point in real time. Once you meet that point, you will see "Found me!" on top of the box. That's how you know you have won</p>
-        <h3>Have Fun!</h3>
+        
+        
     </body>
 </html>
 
